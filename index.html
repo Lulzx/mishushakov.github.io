@@ -1,31 +1,3 @@
-<?php
-if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])):
-        //your site secret key
-        $secret = '6LfsUCQTAAAAAJm0JeG6LG6Uh7xf6neoxcqCiyn4';
-        //get verify response data
-        $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret='.$secret.'&response='.$_POST['g-recaptcha-response']);
-        $responseData = json_decode($verifyResponse);
-        if($responseData->success):
-
-            $empfaenger = "mish.ushakov@gmail.com";
-            $betreff = "New Message from mishushakov.com!";
-            $from = "From: ".$_POST['name']."<".$_POST['email'].">\n";
-            $from .= "Reply-To:".$_POST['email']."\n";
-            $from .= "Content-Type: text/html\n";
-            $text = $_POST['message'];
-
-            mail($empfaenger, $betreff, $text, $from);
-            $result = 'E-Mail sent, thank you!';
-        else:
-            $result = 'Robot verification failed, please try again.';
-        endif;
-    else:
-        $result = 'Please click on the reCAPTCHA box.';
-    endif;
-
-?>
-
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -217,48 +189,12 @@ if(isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'
   <div class="panel-body">
 
     
-      <form class="form-horizontal" method="post" action="index.php">
+      <form class="form-horizontal">
  
-	<div class="form-group">
-      <label for="textArea" class="col-lg-2 control-label">Name</label>
-      <div class="col-lg-10">
-        <input type="text" id="textArea" class="form-control" name="name" maxlength="140" placeholder="First and & Last Name" >
-
-      </div>
-    </div>
-	
-    <div class="form-group">
-      <label for="inputEmail" class="col-lg-2 control-label">Email</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" name="email" id="inputEmail" placeholder="Email">
-
-      </div>
-    </div>
-      
-    <div class="form-group">
-      <label for="textArea" class="col-lg-2 control-label">Message</label>
-      <div class="col-lg-10">
-        <textarea class="form-control" rows="3" id="textArea" name="message"></textarea>
-        
-        <span class="help-block">Don't write shit here , i will find you and...</span>
-      </div>
-    </div>
-      
-	 <div class="g-recaptcha" data-sitekey="6LfsUCQTAAAAABQHKP-OG2TC-enB4y97DGbs4QEq"></div>
-          <br>
-	
-          <div class="form-group">
-	  <div class="col-sm-10 col-sm-offset-2">
-<a style="color:red;"><?php echo $result; ?></a>
-	  </div>
-	</div>
-          
-      <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-        <button type="reset" class="btn btn-default">Cancel</button>
-        <button type="submit" class="btn btn-primary">Send</button>
-      </div>
-    </div>
+	<div class="alert alert-dismissible alert-danger">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Oh snap!</strong> <a href="http://mishushakov.com" class="alert-link">Mail me here</a> because this website doesn't support my contact form :( .
+</div>
       
      </form>
       
