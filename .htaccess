@@ -1,0 +1,9 @@
+#######################################################################
+#     Diese .htaccess wurde vom STRATO-Webservermanager erstellt      #
+#######################################################################
+
+RewriteEngine On
+Redirect 301 /mubot/web http://old.mishushakov.com/mubot/web
+Redirect 301 /mubot http://old.mishushakov.com/mubot
+
+mod_gzip_on Yes
