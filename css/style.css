@@ -93,7 +93,7 @@
     .photo{
         
     margin-top:-50%;
-    border-radius: 50%;
+    border-radius: 10%;
     -webkit-border-radius: 10%;
     -moz-border-radius: 150px;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
@@ -123,8 +123,3 @@
     border: 4px solid white;
         
     }
-
-
-
-
-
