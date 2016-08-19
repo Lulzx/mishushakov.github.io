@@ -9,7 +9,7 @@ app.filter('moment', function () {
 
 app.controller('PostsCtrl', function ($scope, $http) {
     
-    $http.get('http://mishushakov.ddns.net/api/getPosts/3').
+    $http.get('http://mishushakov.ddns.net/api/v1.0/getPosts/3').
         success(function (data, status, headers, config) {
             $scope.posts = data;
             $("#status").fadeOut();
