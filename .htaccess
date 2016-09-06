@@ -1,9 +1,10 @@
-#######################################################################
-#     Diese .htaccess wurde vom STRATO-Webservermanager erstellt      #
-#######################################################################
-
+#Redirect (Not working now)
 RewriteEngine On
 Redirect 301 /mubot/web http://old.mishushakov.com/mubot/web
 Redirect 301 /mubot http://old.mishushakov.com/mubot
+
+#Force SSL
+RewriteCond     %{SERVER_PORT} ^80$
+RewriteRule     ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [L,R]
 
 mod_gzip_on Yes
