@@ -1,7 +1,10 @@
+.paper-body{
+    background-color:#e3e3e3;
+}
 
 #mu.navbar-default .navbar-brand {
     color: white;
-    height: 64px;
+    height: 56dp;
     
 }
 #mu.navbar-default {
@@ -9,7 +12,7 @@
     background-color: transparent;
     background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, transparent 100%);
     border-bottom-width: 0px;
-     box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0);
     padding-top: 0px;
 	transition: all 1s;
 }
@@ -30,11 +33,10 @@
 }
 #mu.navbar-default .navbar-toggle {
     border-color: #ffffff;
-   
-  float: left;
-  margin-left: 15px;
-  border: none;
-      outline: none;
+    float: left;
+    margin-left: 15px;
+    border: none;
+    outline: none;
 }
 #mu.navbar-default .navbar-toggle:hover,
 #mu.navbar-default .navbar-toggle:focus {
@@ -60,11 +62,11 @@
 
 
    
-    .panel.panel-default.mu{
+.panel.panel-default.mu{
     margin-top:-10%; 
 }
     
-    .parallax-window {
+.parallax-window {
     height: 500px;
     background: transparent;
     
@@ -77,16 +79,11 @@
 
 
 @media screen and (max-width: 720px) {
-   
- 
-    
-    .parallax-window {
+.parallax-window {
     height: 200px;
     background: transparent;
-        
     
 }
-    
     
     .photo{
         
@@ -104,8 +101,6 @@
     
     margin-left:auto;
 }
-    
-    
 }
 
 
@@ -123,4 +118,17 @@
     }
 .label{
 	margin-left:5px;
+}
+.fa.social{
+   margin-right:5px;
+}
+#margin-menu{
+    margin-left:7px;
+}
+.text-muted.margin{
+    margin-top:-40px;
+    text-align: center;
+}
+.footer{
+    background-color:#2a2730;
 }

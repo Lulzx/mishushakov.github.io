@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    MishUshakov -- DEV -- @mishushakov
+
+# THANKS
+
+    Guys
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css, Parallax.JS, PACE.js, Bootstrap 3, Bootstrap Paper, FontAwesome, Google Analytics, Alexa Widget, GitHub Pages, Brackets IDE, Love

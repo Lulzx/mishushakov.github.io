@@ -14,57 +14,56 @@
         <!-- Chrome on Android -->
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="application-name" content="Developer MishUshakov">
-        <link rel="icon" sizes="192x192" href="img/photo.jpg">
+        <link rel="icon" sizes="192x192" href="img/avatar/photo.jpg">
 
         <!-- Safari on iOS -->
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
         <meta name="apple-mobile-web-app-title" content="Developer MishUshakov">
-        <link rel="apple-touch-icon" href="img/photo.jpg">
+        <link rel="apple-touch-icon" href="img/avatar/photo.jpg">
 
         <!-- Windows 8 -->
-        <meta name="msapplication-TileImage" content="img/photo.jpg">
+        <meta name="msapplication-TileImage" content="img/avatar/photo.jpg">
         <meta name="msapplication-TileColor" content="#000312">
 
+        <!-- Android Statusbar color -->
         <meta name="theme-color" content="#000312">
-    
-        <script src="https://use.fontawesome.com/6ac98b555f.js"></script>
-
-        <link rel="stylesheet" href="css/minified.css">
-        <link rel="shortcut icon" href="favicon.ico">
-	
-  <!-- Mobile-friendly viewport -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-  <!-- Optional theme -->
-    <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css">
-    
-    <meta name="author" content="MishUshakov">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         
-   <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> 
-	
-    <script src="js/parallax.js"></script>
+    
+        <!-- Styles -->
+        <link rel="stylesheet" href="css/website/style.css">
+        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css">
+        <link rel="stylesheet" href="css/ext/pace.css">
+        <link rel="stylesheet" href="css/ext/Normalize.css">
+    
+        <!-- Hey, thats me :D -->
+        <meta name="author" content="MishUshakov">
+        
+        <!-- Scripts -->
+        <script src="https://use.fontawesome.com/6ac98b555f.js"></script>
+        <script src="js/plugins/pace.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> 
+        <script src="js/plugins/parallax.js"></script>
+        <script src="js/website/main.js"></script>
     
 </head>
-<body style="background-color:#e3e3e3;">
+    
+<!-- Paper body -->    
+<body class="paper-body">
 
+    
+<!-- Navigation bar -->    
 <div id="mu" class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menubuilder"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span>
-                
                 <span class="icon-bar"></span>
             </button>
         
-        <div class="navbar-header"><a class="navbar-brand" href="#about">MU</a>
-        
-        </div>
+    <div class="navbar-header"><a class="navbar-brand" href="#about">MU</a></div>
         <div class="collapse navbar-collapse navbar-menubuilder">
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="#about">About</a>
@@ -76,157 +75,134 @@
                 <li><a href="#contact">Contact</a>
                 </li>
                 <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connect<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="https://new.vk.com/mishushakov"><i class="fa fa-vk" aria-hidden="true" style="margin-right:5px;"></i> VK</a></li>
-            <li><a href="https://www.youtube.com/channel/UCVJLpLXf2GzpzMI7yzgi9aQ"><i class="fa fa-youtube" aria-hidden="true" style="margin-right:5px;"></i> YouTube</a></li>
-            <li><a href="https://github.com/mishushakov"><i class="fa fa-github" aria-hidden="true" style="margin-right:5px;"></i> GitHub</a></li>
-            <li><a href="https://plus.google.com/u/0/+MishUshakovITMU/"><i class="fa fa-google" aria-hidden="true" style="margin-right:5px;"></i>Google+</a></li>
-            <li><a href="http://codepen.io/mishushakov/"><i class="fa fa-codepen" aria-hidden="true" style="margin-right:5px;"></i> Codepen</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#contact"><i class="fa fa-envelope-o " aria-hidden="true" style="margin-right:5px;"></i> Write E-Mail</a></li>
-          </ul>
-        </li>
+                  <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connect<span id="margin-menu" class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://new.vk.com/mishushakov"><i class="fa social fa-vk" aria-hidden="true"></i> VK</a></li>
+                    <li><a href="https://www.youtube.com/channel/UCVJLpLXf2GzpzMI7yzgi9aQ"><i class="fa social fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+                    <li><a href="https://github.com/mishushakov"><i class="fa social fa-github" aria-hidden="true"></i> GitHub</a></li>
+                    <li><a href="https://plus.google.com/u/0/+MishUshakovITMU/"><i class="fa social fa-google" aria-hidden="true"></i>Google+</a></li>
+                    <li><a href="http://codepen.io/mishushakov/"><i class="fa social fa-codepen" aria-hidden="true"></i> Codepen</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#contact"><i class="fa social fa-envelope-o " aria-hidden="true"></i> Write E-Mail</a></li>
+                  </ul>
+                </li>
             </ul>
         </div>
     </div>
 </div>
-	                <a name="about"></a>
+    
+<a name="about"></a>
 
-    <div class="parallax-window" data-parallax="scroll" data-image-src="img/bg.jpg" alt="MishUshakov's background image"></div>
+<div class="parallax-window" data-parallax="scroll" data-image-src="img/background/bg.jpg" alt="MishUshakov's background image"></div>
+    
+    <!-- main website container -->
     <div class="container">
-    
-    <a class="thumbnail">
-      <img src="img/photo.jpg" alt="IT's me!" class="photo">
-    </a>
- 
-    <div class="panel panel-default mu">
-    
-  <div class="panel-heading">
-    <h1 class="panel-title">Mikhail (MishUshakov) Ushakov</h1>
-  </div>
-  <div class="panel-body">
-    Mikhail "MishUshakov" Ushakov born 07.04.2001 in Moscow, now he lives in Germany for 3 years,he is WEB and Android developer since 2011, so he started his little hobby with simple programms written in BASIC and PHP, now he speaks following programming languages (down below).
-      
-       <a name="skills"></a>
-      
-  </div>
-</div>
-    
-    <div class="panel panel-default mu" style="margin-top:1%">
-  
-  <div class="panel-heading">
-    <h3 class="panel-title">Skills</h3>
-  </div>
-  <div class="panel-body">
-<h4>Web (HTML,CSS)</h4>
-      <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-    80%
-  </div>
-</div>
-      
-      <h4>Scripting (JS)</h4>
-      <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
-    30%
-  </div>
-</div>
-      
-      <h4>Programming (Python, C#)</h4>
-      <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-    90%
-  </div>
-</div>
-      
-      <a name="projects"></a>
-      
-      <h4>Android (JAVA)</h4>
-      <div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
-    40%
-  </div>
-</div>
-      
-       
+        <a class="thumbnail">
+          <img src="img/avatar/photo.jpg" id="avatar" alt="IT's me!" class="photo">
+        </a>
         
-      
-  </div>
-</div>
-    
-    <div class="panel panel-default mu" style="margin-top:1%">
-        
-  <div class="panel-heading">
-    <h3 class="panel-title">Projects</h3>
-  </div>
-  <div class="panel-body">
-     <div class="list-group">
-  
-  <a href="http://mishushakov.com/mubot/" class="list-group-item disabled">MUbot Android Edition <span class="label label-warning">Offline</span></a>
-  <a href="http://mishushakov.com/mubot/web/" class="list-group-item disabled">MUbot Web Edition <span class="label label-warning">Offline</span></a>
-  <a class="list-group-item" href="http://ltemplates.net">MUlti Blog <span class="label label-success">Working on</span></a>
-         <a class="list-group-item disabled">
-    ITMUsearch <span class="label label-danger">Deprecated</span>
-  </a>
-    <a class="list-group-item disabled">
-    ITMUCMS <span class="label label-danger">Deprecated</span>
-  </a>
-  
-</div>
-      
-      
-  </div>
-</div>
-           <div class="panel panel-default mu" style="margin-top:1%">
-               
-               <a name="contact"></a>
-               
-  <div class="panel-heading">
-    <h3 class="panel-title">Contact Form</h3>
-  </div>
-  <div class="panel-body">
+        <!-- i call it "Data-panels" -->
+        <div class="panel panel-default mu">
+          <div class="panel-heading">
+            <h1 class="panel-title">Mikhail (MishUshakov) Ushakov</h1>
+          </div>
+          <div class="panel-body">
+            Mikhail "MishUshakov" Ushakov born 07.04.2001 in Moscow, now he lives in Germany for 3 years,he is WEB and Android developer since 2011, so he started his little hobby with simple programms written in BASIC and PHP, now he speaks following programming languages (down below).
 
+            <a name="skills"></a>
+
+         </div>
+        </div>
     
-      <form class="form-horizontal">
- 
-	<div class="alert alert-danger">
-  <strong>Oh snap!</strong> <a href="mailto:i@mish.io?Subject=Message%20From%20Website" class="alert-link">Mail me here</a> Form disabled bc of SPAM messages!
-</div>
-      
-     </form>
-      
-  </div>
-</div>
+        <div class="panel panel-default mu" style="margin-top:1%">
+
+          <div class="panel-heading">
+            <h3 class="panel-title">Skills</h3>
+          </div>
+          <div class="panel-body">
+              <h4>Web (HTML,CSS)</h4>
+              <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                    80%
+                  </div>
+              </div>
+
+              <h4>Scripting (JS)</h4>
+              <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                    30%
+                  </div>
+              </div>
+
+              <h4>Programming (Python, C#)</h4>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                90%
+                </div>
+              </div>
+
+              <a name="projects"></a>
+
+              <h4>Android (JAVA)</h4>
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                40%
+                </div>
+              </div>
+
+          </div>
+        </div>
+    
+        <div class="panel panel-default mu" style="margin-top:1%">
+
+          <div class="panel-heading">
+            <h3 class="panel-title">Projects</h3>
+          </div>
+          <div class="panel-body">
+             <div class="list-group">
+
+              <a href="http://mishushakov.com/mubot/" class="list-group-item disabled">MUbot Android Edition <span class="label label-warning">Offline</span></a>
+              <a href="http://mishushakov.com/mubot/web/" class="list-group-item disabled">MUbot Web Edition <span class="label label-warning">Offline</span></a>
+              <a class="list-group-item" href="http://ltemplates.net">MUlti Blog <span class="label label-success">Working on</span></a>
+                     <a class="list-group-item disabled">
+                ITMUsearch <span class="label label-danger">Deprecated</span>
+              </a>
+                <a class="list-group-item disabled">
+                ITMUCMS <span class="label label-danger">Deprecated</span>
+              </a>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default mu" style="margin-top:1%">
+
+                <a name="contact"></a>
+
+          <div class="panel-heading">
+            <h3 class="panel-title">Contact Form</h3>
+          </div>
+            <div class="panel-body">
+              <form class="form-horizontal">
+                <div class="alert alert-danger">
+                <strong>Oh snap!</strong> <a href="mailto:i@mish.io?Subject=Message%20From%20Website" class="alert-link">Mail me here</a> Form disabled bc of SPAM messages!
+                </div>
+             </form>
+          </div>
+        </div>
     </div>
     
     <br>
-    <footer class="footer" style="background-color:#2a2730;">
+    
+    <!-- Footer and Google Analytics -->
+    <footer class="footer">
         <a href="http://www.alexa.com/siteinfo/mish.io"><script type="text/javascript" src="http://xslt.alexa.com/site_stats/js/t/a?url=mish.io"></script></a>
         <div class="container">
-            <p class="text-muted" style="margin-top:-40px;">New website, proudly powered by <a href="http://mishushakov.com">MishUshakov</a></p>
+            <p class="text-muted margin">New website, proudly powered by <a href="http://mishushakov.com">MishUshakov</a></p>
          </div> 
     </footer>
-    
-<script>
-$(window).scroll(function() {
-        if($(window).scrollTop() > 200) {
-            $("#mu.navbar-default").css("background", "linear-gradient(to bottom, rgba(0,0,0,0) 0%, transparent 100%)");
-           $("#mu.navbar-default").css("background-color", "#000312");
-        } else {
-           $("#mu.navbar-default").css("background-color", "transparent");
-            $("#mu.navbar-default").css("background", " linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, transparent 100%)");
-        }
-    });
 
-$('a').click(function(){
-    $('html, body').animate({
-        scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
-    }, 500);
-    return false;
-});
-    </script>
-    <script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -236,7 +212,6 @@ $('a').click(function(){
   ga('send', 'pageview');
 
 </script>
-    
     
 </body>
 </html>
