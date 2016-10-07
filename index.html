@@ -41,12 +41,12 @@
     <meta name="author" content="MishUshakov">
 
     <!-- Scripts -->
-    <script src="https://use.fontawesome.com/6ac98b555f.js"></script>
-    <script src="js/plugins/pace.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="js/plugins/parallax.js"></script>
-    <script src="js/website/main.js"></script>
+    <script async src="https://use.fontawesome.com/6ac98b555f.js"></script>
+    <script async src="js/plugins/pace.min.js"></script>
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script asyncsrc="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script async src="js/plugins/parallax.js"></script>
+    <script async src="js/website/main.js"></script>
 
 </head>
 
@@ -196,7 +196,7 @@
 
     <!-- Footer and Google Analytics -->
     <footer class="footer">
-        <a href="http://www.alexa.com/siteinfo/mish.io">
+        <a href="https://www.alexa.com/siteinfo/mish.io">
             <script type="text/javascript" src="http://xslt.alexa.com/site_stats/js/t/a?url=mish.io"></script>
         </a>
         <div class="container">
@@ -204,6 +204,15 @@
         </div>
     </footer>
 
+
+    <script>
+        $('a').click(function () {
+            $('html, body').animate({
+                scrollTop: $('[name="' + $.attr(this, 'href').substr(1) + '"]').offset().top
+            }, 500);
+            return false;
+        });
+    </script>
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
