@@ -79,15 +79,15 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connect<span id="margin-menu" class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="https://new.vk.com/mishushakov"><i class="fa social fa-vk" aria-hidden="true"></i> VK</a></li>
-                            <li><a href="https://www.youtube.com/channel/UCVJLpLXf2GzpzMI7yzgi9aQ"><i class="fa social fa-youtube" aria-hidden="true"></i> YouTube</a></li>
-                            <li><a href="https://github.com/mishushakov"><i class="fa social fa-github" aria-hidden="true"></i> GitHub</a></li>
-                            <li><a href="https://plus.google.com/u/0/+MishUshakovITMU/"><i class="fa social fa-google" aria-hidden="true"></i>Google+</a></li>
-                            <li><a href="http://codepen.io/mishushakov/"><i class="fa social fa-codepen" aria-hidden="true"></i> Codepen</a></li>
-                            <li><a href="http://reddit.com/user/mishushakov/"><i class="fa social fa-reddit" aria-hidden="true"></i> Reddit</a></li>
-                            <li><a href="http://soundcloud.com/mishushakov/"><i class="fa social fa-soundcloud" aria-hidden="true"></i> Soundcloud</a></li>
-                            <li><a href="http://angel.io/mishushakov/"><i class="fa social fa-angellist" aria-hidden="true"></i> Angel.io</a></li>
-                            <li><a href="http://about.me/ushakov/"><i class="fa social fa-smile-o" aria-hidden="true"></i> About.me</a></li>
+                            <li><a itemprop="url" href="https://new.vk.com/mishushakov"><i class="fa social fa-vk" aria-hidden="true"></i> VK</a></li>
+                            <li><a itemprop="url" href="https://www.youtube.com/channel/UCVJLpLXf2GzpzMI7yzgi9aQ"><i class="fa social fa-youtube" aria-hidden="true"></i> YouTube</a></li>
+                            <li><a itemprop="url" href="https://github.com/mishushakov"><i class="fa social fa-github" aria-hidden="true"></i> GitHub</a></li>
+                            <li><a itemprop="url" href="https://plus.google.com/u/0/+MishUshakovITMU/"><i class="fa social fa-google" aria-hidden="true"></i>Google+</a></li>
+                            <li><a itemprop="url" href="http://codepen.io/mishushakov/"><i class="fa social fa-codepen" aria-hidden="true"></i> Codepen</a></li>
+                            <li><a itemprop="url" href="http://reddit.com/user/mishushakov/"><i class="fa social fa-reddit" aria-hidden="true"></i> Reddit</a></li>
+                            <li><a itemprop="url" href="http://soundcloud.com/mishushakov/"><i class="fa social fa-soundcloud" aria-hidden="true"></i> Soundcloud</a></li>
+                            <li><a itemprop="url" href="http://angel.io/mishushakov/"><i class="fa social fa-angellist" aria-hidden="true"></i> Angel.io</a></li>
+                            <li><a itemprop="url" href="http://about.me/ushakov/"><i class="fa social fa-smile-o" aria-hidden="true"></i> About.me</a></li>
                             <li role="separator" class="divider"></li>
                             <li><a href="#contact"><i class="fa social fa-envelope-o " aria-hidden="true"></i> Write E-Mail</a></li>
                         </ul>
@@ -102,18 +102,18 @@
     <div class="parallax-window" data-parallax="scroll" data-image-src="img/background/bg.jpg" alt="MishUshakov's background image"></div>
 
     <!-- main website container -->
-    <div class="container">
+    <div class="container" itemscope itemtype="http://schema.org/Person">
         <a class="thumbnail">
-            <img src="img/avatar/photo.jpg" id="avatar" alt="IT's me!" class="photo">
+            <img src="img/avatar/photo.jpg" id="avatar" alt="IT's me!" class="photo" itemprop="image">
         </a>
 
         <!-- i call it "Data-panels" -->
         <div class="panel panel-default mu">
             <div class="panel-heading">
-                <h1 class="panel-title">Mikhail (MishUshakov) Ushakov</h1>
+                <h1 class="panel-title" itemprop="name">Mikhail Ushakov "<span  itemprop="additionalName">MishUshakov</span>"</h1>
             </div>
             <div class="panel-body">
-                I am a Entrepreneur, Founder and Software Engineer at MUlti, currently living somewhere in Germany. My interests range from technology to entrepreneurship and business. I am also interested in artificial intellegence, innovation, and personal development.
+                I am a <span itemprop="jobTitle">Entrepreneur</span>, Founder and Software Engineer at <span itemprop="affiliation">MUlti</span>, currently living somewhere in Germany. My interests range from technology to entrepreneurship and business. I am also interested in artificial intellegence, innovation, and personal development.
 
                 <a name="skills"></a>
                 <br>
@@ -169,13 +169,13 @@
             <div class="panel-body">
                 <div class="list-group">
 
-                    <a href="http://mishushakov.com/mubot/" class="list-group-item disabled">MUbot Android Edition <span class="label label-warning">Offline</span></a>
-                    <a href="http://mishushakov.com/mubot/web/" class="list-group-item disabled">MUbot Web Edition <span class="label label-warning">Offline</span></a>
-                    <a class="list-group-item" href="http://ltemplates.net">MUlti Blog <span class="label label-info">BETA</span></a>
-                    <a class="list-group-item disabled">
+                    <a href="http://mishushakov.com/mubot/" class="list-group-item disabled" itemprop="brand">MUbot Android Edition <span class="label label-warning">Offline</span></a>
+                    <a href="http://mishushakov.com/mubot/web/" class="list-group-item disabled" itemprop="brand">MUbot Web Edition <span class="label label-warning">Offline</span></a>
+                    <a class="list-group-item" href="http://ltemplates.net" itemprop="brand">MUlti Blog <span class="label label-info">BETA</span></a>
+                    <a class="list-group-item disabled" itemprop="brand">
                 ITMUsearch <span class="label label-danger">Deprecated</span>
               </a>
-                    <a class="list-group-item disabled">
+                    <a class="list-group-item disabled" itemprop="brand">
                 ITMUCMS <span class="label label-danger">Deprecated</span>
               </a>
 
@@ -194,7 +194,7 @@
             <div class="panel-body">
                 <form class="form-horizontal">
                     <div class="alert alert-warning">
-                        <strong>Oh snap!</strong> <a href="mailto:i@mish.io?Subject=Message%20From%20Website" class="alert-link">Mail me here</a> Form disabled because of SPAM messages!
+                        <strong>Oh snap!</strong> <a itemprop="email" href="mailto:i@mish.io?Subject=Message%20From%20Website" class="alert-link">Mail me here</a> Form disabled because of SPAM messages!
                     </div>
                 </form>
             </div>
@@ -209,7 +209,7 @@
             <script type="text/javascript" src="http://xslt.alexa.com/site_stats/js/t/a?url=mish.io"></script>
         </a>
         <div class="container">
-            <p class="text-muted margin">Proudly powered by <a href="http://mishushakov.com">MishUshakov</a></p>
+            <p class="text-muted margin">Proudly powered by <a itemprop="url" href="http://mishushakov.com">MishUshakov</a></p>
         </div>
     </footer>
 
