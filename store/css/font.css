@@ -1,1 +1,4 @@
-@import url('https://mish.io/store/css/60sSTRIPE.ttf');
+@font-face {
+    font-family: '60sSTRIPE';
+    src: url('https://mish.io/store/css/60sSTRIPE.ttf');
+}
