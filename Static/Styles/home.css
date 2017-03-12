@@ -40,7 +40,7 @@
 }
 
 .skillicon {
-    font-size: 48px;
+    margin-top: -40px;
 }
 
 .skill {
@@ -89,5 +89,8 @@
 @media screen and (max-width: 720px) {
     .logo {
         display: none;
+    }
+    .icn {
+        background-color: transparent;
     }
 }
