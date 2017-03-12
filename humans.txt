@@ -12,4 +12,4 @@
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css, Parallax.JS, PACE.js, Bootstrap 3, Bootstrap Paper, FontAwesome, Google Analytics, Alexa Widget, GitHub Pages, Brackets IDE, Love
+    Apache Server Configs, Angular, Angular Material PACE.js, FontAwesome, Google Analytics, Alexa Widget, GitHub Pages, Brackets IDE, Love
