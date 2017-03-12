@@ -88,6 +88,10 @@ $scope.showAlert = function(data) {
    $window.open(mail);
  }
 
+ $scope.scroll = function() {
+   $window.scrollTo(0, 600);
+ }
+
  $scope.where = function() {
     $mdDialog.show(
       $mdDialog.alert()
