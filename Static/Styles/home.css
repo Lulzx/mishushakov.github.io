@@ -1,0 +1,74 @@
+.container {
+    height: 100%;
+}
+
+.placeholder {
+    height: 400px;
+    width: 100%;
+    background-color: rgb(55, 71, 79);
+    text-align: center;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.more {
+    margin-top: -25px;
+}
+
+.conteiner {
+    max-width: 500px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+
+.mu {
+    margin-bottom: 20px;
+}
+
+.skillicon {
+    font-size: 48px;
+}
+
+.skill {
+    cursor: pointer;
+    color: white;
+    border-radius: 4px;
+}
+
+.hello {
+    color: white;
+}
+
+.icn {
+    margin-top: -40px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .18);
+}
+
+.digit {
+    margin-top: 13px;
+    font-weight: 600;
+}
+
+.logo {
+    margin-bottom: 50px;
+    width: 540px;
+    height: auto;
+}
+
+.footer {
+    height: 60px;
+    color: white;
+    padding-top: 5px;
+}
