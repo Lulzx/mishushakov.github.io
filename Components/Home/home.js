@@ -9,7 +9,8 @@ $scope.urls = {
   soundcloud: 'https://soundcloud.com/ITMU',
   github: 'https://github.com/MishUshakov',
   codepen: 'https://codepen.io/MishUshakov',
-  reddit: 'https://reddit.com/u/MishUshakov'
+  reddit: 'https://reddit.com/u/MishUshakov',
+  store: 'https://mish.io/store'
 }
 
 $scope.skills = [{

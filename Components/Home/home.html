@@ -7,7 +7,7 @@
         <h1 class="md-headline hello">Welcome to my new homepage</h1>
     </div>
 
-    <div class="centered more">
+    <div class="floating more">
         <md-button class="md-fab" aria-label="Eat cake" ng-click="scroll()">
             <md-icon class="material-icons">keyboard_arrow_down</md-icon>
         </md-button>
@@ -34,42 +34,36 @@
 
         <!-- just add me on social networks -->
 
-        <md-card class="mu">
-            <md-card-title>
-                <md-card-title-text>
-                    <span class="md-headline">Connect</span>
-                    <span class="md-subhead">
-                      <md-button aria-label="VK" class="md-fab md-raised md-mini" ng-href="{{urls.vk}}" target="_blank">
-                        <md-icon md-font-icon="fa fa-vk"></md-icon>
-                      </md-button>
+        <div class="social">
+            <md-button aria-label="VK" class="md-fab md-raised md-mini" ng-href="{{urls.vk}}" target="_blank">
+                <md-icon md-font-icon="fa fa-vk"></md-icon>
+            </md-button>
 
-                      <md-button aria-label="VK" class="md-fab md-raised md-mini" ng-href="{{urls.yt}}" target="_blank">
-                        <md-icon md-font-icon="fa fa-youtube"></md-icon>
-                      </md-button>
+            <md-button aria-label="VK" class="md-fab md-raised md-mini" ng-href="{{urls.yt}}" target="_blank">
+                <md-icon md-font-icon="fa fa-youtube"></md-icon>
+            </md-button>
 
-                      <md-button aria-label="GitHub" class="md-fab md-raised md-mini" ng-href="{{urls.github}}" target="_blank">
-                        <md-icon md-font-icon="fa fa-github"></md-icon>
-                      </md-button>
+            <md-button aria-label="GitHub" class="md-fab md-raised md-mini" ng-href="{{urls.github}}" target="_blank">
+                <md-icon md-font-icon="fa fa-github"></md-icon>
+            </md-button>
 
-                      <md-button aria-label="Codepen" class="md-fab md-raised md-mini" ng-href="{{urls.codepen}}" target="_blank">
-                        <md-icon md-font-icon="fa fa-codepen"></md-icon>
-                      </md-button>
+            <md-button aria-label="Codepen" class="md-fab md-raised md-mini" ng-href="{{urls.codepen}}" target="_blank">
+                <md-icon md-font-icon="fa fa-codepen"></md-icon>
+            </md-button>
 
-                      <md-button aria-label="Reddit" class="md-fab md-raised md-mini" ng-href="{{urls.reddit}}" target="_blank">
-                        <md-icon md-font-icon="fa fa-reddit"></md-icon>
-                      </md-button>
+            <md-button aria-label="Reddit" class="md-fab md-raised md-mini" ng-href="{{urls.reddit}}" target="_blank">
+                <md-icon md-font-icon="fa fa-reddit"></md-icon>
+            </md-button>
 
-                      <md-button aria-label="Soundcloud" class="md-fab md-raised md-mini" ng-href="{{urls.soundcloud}}" target="_blank">
-                        <md-icon md-font-icon="fa fa-soundcloud"></md-icon>
-                      </md-button>
+            <md-button aria-label="Soundcloud" class="md-fab md-raised md-mini" ng-href="{{urls.soundcloud}}" target="_blank">
+                <md-icon md-font-icon="fa fa-soundcloud"></md-icon>
+            </md-button>
 
-                      <md-button aria-label="Angel" class="md-fab md-raised md-mini" ng-href="{{urls.angel}}" target="_blank">
-                        <md-icon md-font-icon="fa fa-angellist"></md-icon>
-                      </md-button>
-                    </span>
-                </md-card-title-text>
-            </md-card-title>
-        </md-card>
+            <md-button aria-label="Angel" class="md-fab md-raised md-mini" ng-href="{{urls.angel}}" target="_blank">
+                <md-icon md-font-icon="fa fa-angellist"></md-icon>
+            </md-button>
+        </div>
+
 
         <!-- innovation in grids -->
 
@@ -170,7 +164,8 @@
     </div>
 
     <div class="placeholder footer">
-        <p>Copyright by Ushakov 2017</p>
+        <p>Copyright by
+            <md-button class="md-accent" ng-href="{{urls.store}}">Ushakov</md-button> 2017</p>
     </div>
 
 </md-content>
