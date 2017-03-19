@@ -1,14 +1,20 @@
-app.controller("Home", function($scope, $mdDialog, $window, $timeout) {
+app.controller("Home", function($scope, $mdDialog, $window, $timeout, $mdToast) {
 
 $scope.loaded = false;
 
 $scope.load = () => {
   $timeout(() => {
     $scope.loaded = true;
+
   }, 1000);
 }
 
 $scope.load();
+
+$scope.announce = {
+  title: 'TAP2',
+  source: '../../Static/Images/Announce/latest.png'
+}
 
 $scope.urls = {
   bioURL: 'http://about.me/ushakov',
@@ -140,5 +146,6 @@ $scope.showAlert = data => {
         .ok('Got it!')
     );
   }
+
 
 });
