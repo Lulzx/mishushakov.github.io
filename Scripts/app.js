@@ -11,7 +11,7 @@ app.config(function($routeProvider, $locationProvider, $mdThemingProvider) {
         $locationProvider.html5Mode(true);
 
         $mdThemingProvider.theme('default')
-          .primaryPalette('blue-grey')
-          .accentPalette('yellow')
+          .primaryPalette('light-blue')
+          .accentPalette('red')
           //.dark();
 });

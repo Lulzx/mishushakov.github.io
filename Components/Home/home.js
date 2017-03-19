@@ -1,4 +1,14 @@
-app.controller("Home", function($scope, $mdDialog, $window) {
+app.controller("Home", function($scope, $mdDialog, $window, $timeout) {
+
+$scope.loaded = false;
+
+$scope.load = () => {
+  $timeout(() => {
+    $scope.loaded = true;
+  }, 1000);
+}
+
+$scope.load();
 
 $scope.urls = {
   bioURL: 'http://about.me/ushakov',
@@ -12,6 +22,33 @@ $scope.urls = {
   reddit: 'https://reddit.com/u/MishUshakov',
   store: 'https://mish.io/store'
 }
+
+$scope.socials = [
+  {
+    link: $scope.urls.vk,
+    icon: 'vk'
+  },
+  {
+    link: $scope.urls.yt,
+    icon: 'youtube'
+  },
+  {
+    link: $scope.urls.github,
+    icon: 'github'
+  },
+  {
+    link: $scope.urls.codepen,
+    icon: 'codepen'
+  },
+  {
+    link: $scope.urls.angel,
+    icon: 'angellist'
+  },
+  {
+    link: $scope.urls.soundcloud,
+    icon: 'soundcloud'
+  }
+]
 
 $scope.skills = [{
   name: 'HTML, CSS',
@@ -28,32 +65,32 @@ $scope.skills = [{
 {
   name: 'JavaScript',
   icon: 'favorite',
-  color: '#ffff8d',
+  color: '#f1c40f',
   description: 'i use it for backend systems and many web apps, this web app is written in JS too!'
 },
 {
   name: 'Backend',
   icon: 'cloud',
   color: '#ff80ab',
-  description: 'i love it'
+  description: 'i have large experience in RESTful development'
 },
 {
   name: 'Web Apps',
   icon: 'apps',
   color: '#8c9eff',
-  description: 'i can do it'
+  description: 'im using Angular and Angular 2 to create progressive Web Apps, this website is a Web App too!'
 },
 {
   name: 'React Native',
   icon: 'smartphone',
   color: '#009688',
-  description: 'im creating large mobile applications that are using React Native as core'
+  description: 'im creating mobile applications that are using React Native as core'
 }]
 
 $scope.projects = [{
   name: 'MUlti',
   icon: 'M',
-  color: '#1DE9B6',
+  color: '#2ecc71',
   link: 'https://multi-c7c23.firebaseapp.com'
 },
 {
@@ -69,7 +106,7 @@ $scope.projects = [{
   link: 'http://4pda.ru/forum/index.php?showtopic=693522'
 }]
 
-$scope.showAlert = function(data) {
+$scope.showAlert = data => {
    $mdDialog.show(
      $mdDialog.alert()
        .clickOutsideToClose(true)
@@ -80,20 +117,20 @@ $scope.showAlert = function(data) {
    );
  };
 
- $scope.openlink = function(link) {
+ $scope.openlink = link => {
    $window.open(link, '_blank');
  }
 
- $scope.send = function() {
-   let mail = 'mailto:i@mish.io?subject=' + $scope.subject + '&body=' + $scope.body;
+ $scope.send = () => {
+   let mail = `mailto:i@mish.io?subject=${$scope.subject}&body=${$scope.body}`;
    $window.open(mail);
  }
 
- $scope.scroll = function() {
+ $scope.scroll = () => {
    $window.scrollTo(0, 600);
  }
 
- $scope.where = function() {
+ $scope.where = () => {
     $mdDialog.show(
       $mdDialog.alert()
         .clickOutsideToClose(true)
@@ -102,6 +139,6 @@ $scope.showAlert = function(data) {
         .ariaLabel('Alert Dialog Demo')
         .ok('Got it!')
     );
-  };
+  }
 
 });

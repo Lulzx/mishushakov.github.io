@@ -1,5 +1,35 @@
+@font-face {
+    font-family: construct;
+    src: url('../Fonts/construct.ttf');
+}
+
+@keyframes load {
+    from {
+        top: 0;
+    }
+    to {
+        top: 100%;
+    }
+}
+
 .container {
     height: 100%;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    background-color: white;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20%;
+}
+
+.loader.ng-hide {
+    animation: 2s load;
 }
 
 .placeholder {
@@ -51,6 +81,15 @@
 
 .hello {
     color: white;
+    margin-top: 100px;
+    font-family: construct;
+    font-size: 36pt;
+}
+
+.hello.loading {
+    color: #aeaeae;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .icn {
@@ -68,16 +107,10 @@
     font-weight: 600;
 }
 
-.logo {
-    margin-bottom: 50px;
-    width: 300px;
-    height: auto;
-}
-
 .footer {
-    height: 50px;
+    height: 30px;
     color: white;
-    padding-top: 0px;
+    padding-top: 15px;
 }
 
 @media screen and (max-width: 900px) {
@@ -87,9 +120,6 @@
 }
 
 @media screen and (max-width: 720px) {
-    .logo {
-        display: none;
-    }
     .icn {
         background-color: transparent;
     }
