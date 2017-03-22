@@ -6,7 +6,7 @@ app.config(function($routeProvider, $locationProvider, $mdThemingProvider) {
         .when("/", {
             templateUrl: "../Components/Home/home.html",
             controller: "Home"
-        });
+        }).otherwise({ redirectTo: '/'});
 
         $locationProvider.html5Mode(true);
 
