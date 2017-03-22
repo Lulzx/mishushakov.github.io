@@ -1,15 +1,6 @@
 app.controller("Home", function($scope, $mdDialog, $window, $timeout, $mdToast) {
 
-$scope.loaded = false;
-
-$scope.load = () => {
-  $timeout(() => {
-    $scope.loaded = true;
-
-  }, 1000);
-}
-
-$scope.load();
+$scope.loaded = true;
 
 $scope.announce = {
   title: 'TAP2',
