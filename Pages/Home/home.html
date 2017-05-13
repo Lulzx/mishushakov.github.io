@@ -1,0 +1,144 @@
+<!-- Hello World -->
+
+<div class="loader" ng-hide="loaded==true">
+    <h1 class="hello loading">Ushakov</h1>
+</div>
+
+<div class="placeholder md-whiteframe-5dp">
+    <h1 class="hello">Ushakov</h1>
+</div>
+
+<div class="floating more">
+    <md-button class="md-fab" aria-label="Eat cake" ng-click="scroll()">
+        <md-icon class="material-icons">keyboard_arrow_down</md-icon>
+    </md-button>
+    <md-tooltip md-direction="bottom">Scroll down</md-tooltip>
+</div>
+
+<!-- its not a container its a conteiner -->
+<div class="conteiner" itemscope itemtype="http://schema.org/Person">
+
+    <!-- About me -->
+    <md-card class="mu">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline" itemprop="name">Mikhail Ushakov</span><span itemprop="additionalName">MishUshakov</span>
+                <span class="md-subhead">I am a <span itemprop="jobTitle">Entrepreneur</span>, Founder and Software Engineer
+                at <span itemprop="affiliation">MUlti</span>, currently living somewhere in <span itemprop="homeLocation">Germany</span>.
+                My interests range from technology to entrepreneurship and business. I am also interested in artificial intellegence,
+                innovation, and personal development. </span>
+            </md-card-title-text>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="start center">
+            <md-button ng-href="{{urls.bioURL}}" target="_blank">read bio</md-button>
+            <md-button class="md-primary" ng-href="{{urls.angel}}" target="_blank">hire</md-button>
+        </md-card-actions>
+    </md-card>
+
+    <!-- just add me on social networks -->
+
+    <div class="social">
+        <md-button ng-repeat="social in socials" aria-label="{{social.icon}}" ng-style="{backgroundColor: social.color}" class="md-fab md-raised md-mini"
+            ng-href="{{social.link}}" target="_blank">
+            <md-icon md-font-icon="fa fa-{{social.icon}}" ng-style="{color: '#fff'}"></md-icon>
+        </md-button>
+    </div>
+
+    <!-- This is a announce -->
+
+    <md-card class="mu">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Announce</span>
+                <span class="md-subhead">
+                    <img class="announce" alt="{{announce.title}}" title="{{announce.title}}" ng-src="{{announce.source}}" />
+                 </span>
+            </md-card-title-text>
+        </md-card-title>
+    </md-card>
+
+    <!-- innovation in grids -->
+
+    <md-card class="mu">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">My Skills</span>
+                <span class="md-subhead">
+                
+                    <md-chips ng-model="skills" readonly="true">
+                    </md-chips>
+
+                </span>
+            </md-card-title-text>
+        </md-card-title>
+
+        <md-card-actions layout="row" layout-align="start center">
+            <md-button class="md-primary" ng-href="{{urls.stack}}" target="_blank">check out my stack</md-button>
+        </md-card-actions>
+    </md-card>
+
+    <!-- my projects(removed old stuff) -->
+
+    <md-card class="mu">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Projects</span>
+                <span class="md-subhead">
+                      <md-grid-list
+                       md-cols-xs="6" md-cols-sm="6" md-cols-md="6" md-cols-gt-md="6"
+                       md-row-height-gt-md="1:1" md-row-height="1:1"
+                       md-gutter="12px" md-gutter-gt-sm="8px" >
+
+                       <md-grid-tile ng-repeat="project in projects"
+                        md-rowspan="2"
+                        md-colspan="2"
+                        class="skill"
+                        ng-style="{backgroundColor: project.color}"
+                        ng-click="openlink(project.link)">
+
+                        <div class="icn"><p class="digit">{{project.icon}}</p></div>
+
+                        <md-grid-tile-footer>
+                        <h3 itemprop="brand">{{project.name}}</h3>
+                        </md-grid-tile-footer>
+                      </md-grid-tile>
+                     </md-grid-list>
+                    </span>
+            </md-card-title-text>
+        </md-card-title>
+
+        <md-card-actions layout="row" layout-align="start center">
+            <md-button class="md-primary" ng-href="{{urls.new}}" target="_blank">More Projects</md-button>
+        </md-card-actions>
+    </md-card>
+
+    <!-- Users think that this form directly sends a message, haha lets troll them -->
+
+    <md-card class="mu">
+        <md-card-title>
+            <md-card-title-text>
+                <span class="md-headline">Contact</span>
+                <span class="md-subhead">
+
+                      <md-input-container class="md-block">
+                        <label>Subject</label>
+                        <input ng-model="subject">
+                      </md-input-container>
+
+                      <md-input-container class="md-block">
+                      <label>Message</label>
+                      <textarea ng-model="body" md-maxlength="150"></textarea>
+                    </md-input-container>
+
+                    <md-button class="md-raised md-accent" itemprop="email" ng-click="send()">Send</md-button>
+
+                    </span>
+            </md-card-title-text>
+        </md-card-title>
+    </md-card>
+
+</div>
+
+<div class="placeholder footer">
+    <span>proudly powered by Ushakov</span>
+</div>

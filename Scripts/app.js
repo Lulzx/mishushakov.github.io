@@ -4,7 +4,7 @@ const app = angular.module('Ushakov');
 app.config(function($routeProvider, $locationProvider, $mdThemingProvider) {
     $routeProvider
         .when("/", {
-            templateUrl: "../Components/Home/home.html",
+            templateUrl: "../Pages/Home/home.html",
             controller: "Home"
         }).otherwise({ redirectTo: '/'});
 
