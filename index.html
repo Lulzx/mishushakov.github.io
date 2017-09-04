@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
+  <head>
     <meta charset="utf-8">
     <title>The official website of Mikhail Ushakov</title>
-    <meta name="description" content="Im Entrepreneur, Founder and Software Engineer at MUlti, and this is my official webpage">
-    <meta name="keywords" content="MishUshakov, Mikhail Ushakov, mish, github, developer, android, web, marketing, material design, polymer"
-    />
+    <meta name="description" content="Im Entrepreneur and creator of MUlti and this is my official webpage">
     <meta name="yandex-verification" content="e5acf73236e4b71c" />
 
     <!-- Mobile Stuff -->
@@ -18,85 +14,39 @@
     <!-- Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Mikhail Ushakov">
-    <link rel="icon" sizes="192x192" href="Static/Images/photo.jpg">
 
     <!-- Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Mikhail Ushakov">
-    <link rel="apple-touch-icon" href="Static/Images/photo.jpg">
+    <link rel="apple-touch-icon" href="https://github.com/MishUshakov/Ushakov/blob/master/images/favicon/U.png">
 
     <!-- OpenGraph -->
     <meta property="og:title" content="The official website of Mikhail Ushakov">
     <meta property="og:image" content="https://mish.io/Ushakov/images/logo/Placeholder.png">
-    <meta property="og:site_name" content="The official website of Mikhail Ushakov">
-    <meta property="og:description" content="Im Entrepreneur, Founder and Software Engineer at MUlti, and this is my official webpage">
+    <meta property="og:description" content="Im Entrepreneur and creator of MUlti, and this is my official webpage">
 
     <meta property="og:url" content="https://mish.io">
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:description" content="Im Entrepreneur, Founder and Software Engineer at MUlti, and this is my official webpage"
+    <meta name="twitter:description" content="Im Entrepreneur and creator of MUlti, and this is my official webpage"
     />
     <meta name="twitter:title" content="The official website of Mikhail Ushakov" />
     <meta name="twitter:image" content="https://mish.io/Ushakov/images/logo/USHAKOV.png" />
 
     <!-- Windows 8 -->
-    <meta name="msapplication-TileImage" content="Static/Images/photo.jpg">
-    <meta name="msapplication-TileColor" content="#37474F">
+    <meta name="msapplication-TileImage" content="https://github.com/MishUshakov/Ushakov/blob/master/images/favicon/U.png">
+    <meta name="msapplication-TileColor" content="#0057e7">
 
     <!-- Android Statusbar color -->
-    <meta name="theme-color" content="#37474F">
-
-    <link rel="manifest" href="manifest.json">
-
-    <base href="/">
-
-    <link rel="stylesheet" href="Static/Styles/home.css">
-
+    <meta name="theme-color" content="#0057e7">
+    
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.min.css">
-
-    <!-- Scripts -->
-
-    <script src="https://use.fontawesome.com/6ac98b555f.js"></script>
-
-    <script>
-        (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-        ga('create', 'UA-78786318-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-
-</head>
-
-<body ng-app="Ushakov" ng-cloak>
-
-    <!-- View -->
-    <ng-view></ng-view>
-
-    <!-- if you see that, the app works, but if there is a problem i don't know why, trying to solve that -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.3/angular-material.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-animate.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-aria.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-messages.min.js"></script>
-
-    <!-- Internal Scripts -->
-    <script src="Scripts/app.js"></script>
-    <script src="Pages/Home/home.js"></script>
-
-</body>
-
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="dist/build.js"></script>
+  </body>
 </html>
