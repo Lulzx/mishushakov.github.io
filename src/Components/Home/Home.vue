@@ -82,7 +82,7 @@
         </table>
 
         <br>
-        <p class="copyright" id="bottom">Proudly powered by <a href="mish.io">Ushakov</a></p>
+        <p class="copyright" id="bottom">Proudly powered by <a href="https://mish.io/Ushakov">Ushakov</a></p>
 
     </div>
 </section>
