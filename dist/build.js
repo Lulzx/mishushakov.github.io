@@ -13630,7 +13630,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_vm._v("Proudly powered by "), _c('a', {
     attrs: {
-      "href": "mish.io"
+      "href": "https://mish.io/Ushakov"
     }
   }, [_vm._v("Ushakov")])])
 }]}
