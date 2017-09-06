@@ -13363,9 +13363,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 const client = new __WEBPACK_IMPORTED_MODULE_0_api_ai_javascript__["a" /* ApiAiClient */]({ accessToken: 'f7071275f4bc4841b52bcb0759379275' });
+const predict_url = "https://predictor.yandex.net/api/v1/predict.json/complete?key=pdct.1.1.20170905T214841Z.644a7ec33dd5923e.8db7342c3fc13a7daf3de1c1c64e695ba271d5bb&lang=en&q=";
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     name: 'home',
@@ -13373,7 +13392,8 @@ const client = new __WEBPACK_IMPORTED_MODULE_0_api_ai_javascript__["a" /* ApiAiC
         return {
             answers: [],
             query: '',
-            queries: []
+            queries: [],
+            prediction: ''
         };
     },
     methods: {
@@ -13391,6 +13411,13 @@ const client = new __WEBPACK_IMPORTED_MODULE_0_api_ai_javascript__["a" /* ApiAiC
         autosubmit(suggestion) {
             this.query = suggestion;
             this.submit();
+        },
+        predict() {
+            if (this.query !== null) {
+                fetch(predict_url + this.query).then(response => response.json()).then(data => {
+                    this.prediction = data.text[0];
+                });
+            }
         }
     }
 });
@@ -13439,7 +13466,7 @@ exports = module.exports = __webpack_require__(18)();
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto);", ""]);
 
 // module
-exports.push([module.i, "body{margin:0;background-color:#f5f5f5;font-family:Roboto,sans-serif}.ai-window,.wrapper{max-width:500px;margin-left:auto;margin-right:auto}.ai-window{padding:1rem}.query{padding:16px 0;background-color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);z-index:999;position:fixed;width:100%}.queryform{border:0;width:80%;margin-left:60px;font-size:16px;outline:none;color:rgba(0,0,0,.8);font-weight:500}.wrapper:hover>.iicon{color:#0057e7}.iicon{margin-left:20px;position:absolute;color:rgba(0,0,0,.8);cursor:pointer}.chat-window{width:100%}.bubble{width:auto;background-color:#e1e1e1;padding:16px;border-radius:8px;color:rgba(0,0,0,.8);float:right}.bubble.bot{background-color:#fff;float:left}td{margin-top:30px;margin-bottom:10px}.mdc-card{background-color:#fff;max-width:500px}.openlink{vertical-align:middle;margin-top:-5px;margin-left:5px}.mdc-card__media-item{height:auto;width:100%;margin-top:-5px}.mdc-card__action{color:#0057e7}.chips{margin-left:-10px}.suggestion{margin-top:20px;float:left;margin-left:10px;padding:10px;border:2px solid rgba(0,0,0,.4);color:rgba(0,0,0,.4);border-radius:4px;cursor:pointer}.suggestion:active{border:2px solid #000;color:#000}.suggestion.link{color:#fff;background-color:#0057e7;border:2px solid #0057e7}.copyright{font-weight:600;color:rgba(0,0,0,.6)}.copyright a{text-decoration:none;color:#0057e7}", ""]);
+exports.push([module.i, "body{margin:0;background-color:#f5f5f5;font-family:Roboto,sans-serif}.ai-window,.wrapper{max-width:500px;margin-left:auto;margin-right:auto}.ai-window{padding:1rem}.query{padding:16px 0;background-color:#fff;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 2px rgba(0,0,0,.24);z-index:999;position:fixed;width:100%}.queryform{border:0;width:80%;margin-left:60px;font-size:16px;outline:none;color:transparent;font-weight:500;caret-color:red}.queryform:focus{opacity:1}.wrapper:hover>.iicon{color:#0057e7}.iicon{margin-left:20px;position:absolute;color:rgba(0,0,0,.8);cursor:pointer}.chat-window{width:100%}.bubble{width:auto;background-color:#e1e1e1;padding:16px;border-radius:8px;color:rgba(0,0,0,.8);float:right}.bubble.bot{background-color:#fff;float:left}td{margin-top:30px;margin-bottom:10px}.mdc-card{background-color:#fff;max-width:500px}.openlink{vertical-align:middle;margin-top:-5px;margin-left:5px}.mdc-card__media-item{height:auto;width:100%;margin-top:-5px}.mdc-card__action{color:#0057e7}.chips{margin-left:-10px}.suggestion{margin-top:20px;float:left;margin-left:10px;padding:10px;border:2px solid rgba(0,0,0,.4);color:rgba(0,0,0,.4);border-radius:4px;cursor:pointer}.suggestion:active{border:2px solid #000;color:#000}.suggestion.link{color:#fff;background-color:#0057e7;border:2px solid #0057e7}.copyright{font-weight:600;color:rgba(0,0,0,.6)}.copyright a{text-decoration:none;color:#0057e7}.prediction{margin-left:63px;color:rgba(0,0,0,.5);font-size:16px;font-weight:500;position:absolute;margin-top:3px;z-index:1}.autocomplete{color:rgba(0,0,0,.8)}", ""]);
 
 // exports
 
@@ -13521,7 +13548,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "query"
   }, [_c('div', {
     staticClass: "wrapper"
-  }, [_c('i', {
+  }, [_c('span', {
+    staticClass: "prediction"
+  }, [_c('span', {
+    staticClass: "autocomplete"
+  }, [_vm._v(_vm._s(_vm.query.substring(0, _vm.query.lastIndexOf(""))))]), _vm._v(" " + _vm._s(_vm.prediction))]), _vm._v(" "), _c('i', {
     staticClass: "material-icons iicon"
   }, [_vm._v("keyboard")]), _c('input', {
     directives: [{
@@ -13532,6 +13563,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }],
     staticClass: "queryform",
     attrs: {
+      "id": "queryform",
       "placeholder": "Any questions? Type hello and press enter",
       "autofocus": "",
       "type": "text"
@@ -13540,10 +13572,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "value": (_vm.query)
     },
     on: {
-      "keyup": function($event) {
-        if (!('button' in $event) && $event.keyCode !== 13) { return null; }
-        _vm.submit($event)
-      },
+      "keyup": [function($event) {
+        if (!('button' in $event) && _vm._k($event.keyCode, "enter", 13)) { return null; }
+        _vm.submit()
+      }, function($event) {
+        _vm.predict()
+      }],
       "input": function($event) {
         if ($event.target.composing) { return; }
         _vm.query = $event.target.value
