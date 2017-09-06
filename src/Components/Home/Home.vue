@@ -3,8 +3,9 @@
  <!-- The input -->
     <div class="query">
         <div class="wrapper">
-            <i class="material-icons iicon">keyboard</i><input v-model="query" class="queryform" v-on:keyup.13="submit" placeholder="Any questions? Type hello and press enter" autofocus type="text">
-        </div>
+            <span class="prediction"><span class="autocomplete">{{query.substring(0, query.lastIndexOf(""))}}</span> {{prediction}}</span>
+            <i class="material-icons iicon">keyboard</i><input v-model="query" id="queryform" class="queryform" @keyup.enter="submit()" @keyup="predict()" placeholder="Any questions? Type hello and press enter" autofocus type="text">        
+            </div>
     </div>
 
     <div class="ai-window">
@@ -121,8 +122,12 @@ body
     margin-left: 60px
     font-size: 16px
     outline: none
-    color: rgba(0,0,0,0.8)
+    color: transparent
     font-weight: 500
+    caret-color: red
+
+.queryform:focus 
+    opacity: 1
 
 .wrapper:hover > .iicon
     color: #0057e7
@@ -199,11 +204,25 @@ td
     text-decoration: none
     color: #0057e7
 
+.prediction
+    margin-left: 63px
+    color: rgba(0,0,0,0.5)
+    font-size: 16px
+    font-weight: 500
+    position: absolute
+    margin-top: 3px
+    z-index: 1
+
+.autocomplete
+    color: rgba(0,0,0,0.8)
+
 </style>
 
 <script>
 import {ApiAiClient} from "api-ai-javascript"
+
 const client = new ApiAiClient({accessToken: 'f7071275f4bc4841b52bcb0759379275'})
+const predict_url = "https://predictor.yandex.net/api/v1/predict.json/complete?key=pdct.1.1.20170905T214841Z.644a7ec33dd5923e.8db7342c3fc13a7daf3de1c1c64e695ba271d5bb&lang=en&q="
 
 export default {
     name: 'home',
@@ -211,7 +230,8 @@ export default {
         return {
             answers: [],
             query: '',
-            queries: []
+            queries: [],
+            prediction: ''
         }
     },
     methods: {
@@ -229,6 +249,15 @@ export default {
         autosubmit(suggestion){
             this.query = suggestion
             this.submit()
+        },
+        predict(){
+            if(this.query !== null){
+                fetch(predict_url + this.query)
+                .then((response) => response.json())
+                .then((data) => {
+                    this.prediction = data.text[0]
+                })
+            }
         }
     }
 }
