@@ -3,9 +3,19 @@
  <!-- The input -->
     <div class="query">
         <div class="wrapper">
-            <span class="prediction"><span class="autocomplete">{{query.substring(0, query.lastIndexOf(""))}}</span> {{prediction}}</span>
-            <i class="material-icons iicon">keyboard</i><input v-model="query" id="queryform" class="queryform" @keyup.enter="submit()" @keyup="predict()" placeholder="Any questions? Type hello and press enter" autofocus type="text">        
-            </div>
+            <i class="material-icons iicon">keyboard</i><input autocomplete="off" v-model="query" class="queryform" @keyup.enter="submit()" placeholder="Any questions? Type hello and press enter" autofocus type="text">        
+        </div>
+    </div>
+
+    <div role="progressbar" class="mdc-linear-progress">
+        <div class="mdc-linear-progress__buffering-dots"></div>
+        <div class="mdc-linear-progress__buffer"></div>
+        <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+            <span class="mdc-linear-progress__bar-inner"></span>
+        </div>
+        <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+            <span class="mdc-linear-progress__bar-inner"></span>
+        </div>
     </div>
 
     <div class="ai-window">
@@ -83,7 +93,7 @@
         </table>
 
         <br>
-        <p class="copyright" id="bottom">Proudly powered by <a href="https://mish.io/Ushakov">Ushakov</a></p>
+        <p class="copyright" id="bottom">Proudly powered by <a href="https://mish.io/Ushakov">Ushakov</a> & <a href="https://API.ai">API.ai</a></p>
 
     </div>
 </section>
@@ -122,12 +132,9 @@ body
     margin-left: 60px
     font-size: 16px
     outline: none
-    color: transparent
+    color: rgba(0,0,0,0.8)
     font-weight: 500
     caret-color: red
-
-.queryform:focus 
-    opacity: 1
 
 .wrapper:hover > .iicon
     color: #0057e7
@@ -142,11 +149,11 @@ body
     width: 100%
 
 .bubble
-    width: auto
+    max-width: 300px
     background-color: #E1E1E1
     padding: 16px
     border-radius: 8px
-    color: rgba(0,0,0,0.8)
+    color: rgba(0,0,0,0.7)
     float: right
 
 .bubble.bot
@@ -159,7 +166,7 @@ td
 
 .mdc-card
     background-color: white
-    max-width: 500px
+    max-width: 300px
 
 .openlink
     vertical-align: middle
@@ -196,33 +203,23 @@ td
     background-color: #0057e7
     border: 2px #0057e7 solid
 
+.suggestion.link:active
+    background-color: darken(#0057e7, 10%)
+    border: 2px darken(#0057e7, 10%) solid
+
 .copyright
     font-weight: 600
-    color: rgba(0,0,0,0.6)
+    color: rgba(0,0,0,0.5)
 
 .copyright a
     text-decoration: none
     color: #0057e7
 
-.prediction
-    margin-left: 63px
-    color: rgba(0,0,0,0.5)
-    font-size: 16px
-    font-weight: 500
-    position: absolute
-    margin-top: 3px
-    z-index: 1
-
-.autocomplete
-    color: rgba(0,0,0,0.8)
-
 </style>
 
 <script>
 import {ApiAiClient} from "api-ai-javascript"
-
 const client = new ApiAiClient({accessToken: 'f7071275f4bc4841b52bcb0759379275'})
-const predict_url = "https://predictor.yandex.net/api/v1/predict.json/complete?key=pdct.1.1.20170905T214841Z.644a7ec33dd5923e.8db7342c3fc13a7daf3de1c1c64e695ba271d5bb&lang=en&q="
 
 export default {
     name: 'home',
@@ -230,15 +227,14 @@ export default {
         return {
             answers: [],
             query: '',
-            queries: [],
-            prediction: ''
+            queries: []
         }
     },
     methods: {
         submit(){
             client.textRequest(this.query).then((response) => {
                 if (this.query == 'clear') this.answers = []
-
+                
                 this.answers.push(response)
                 this.queries.push(this.query)
                 this.query = ''
@@ -249,15 +245,6 @@ export default {
         autosubmit(suggestion){
             this.query = suggestion
             this.submit()
-        },
-        predict(){
-            if(this.query !== null){
-                fetch(predict_url + this.query)
-                .then((response) => response.json())
-                .then((data) => {
-                    this.prediction = data.text[0]
-                })
-            }
         }
     }
 }
